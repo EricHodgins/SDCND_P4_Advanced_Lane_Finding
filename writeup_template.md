@@ -36,8 +36,6 @@ You're reading it!
 
 The code for this step is located in a file called `calibrate_camera.py` and is marked in the `Advanced_Lane_Finding_Notebook.ipynb` notebook.  I read in 20 checkboard pictures taken by the camera.  Using cv2 I find the object points and image points.  From the these I use an image to find the coeffecients for undistorting the camera pictures.
 
-![alt text][image1]
-
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
@@ -50,7 +48,7 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 I used a combination of color and gradient thresholds and HLS color space to generate a binary image (the pipeline is found in  `image_pipeline.py`).  Here's an example of my output for this step.
 
-![Image](.test_images/Pipelined_Image_Straight.jpg)
+![Image](./test_images/Pipelined_Image_Straight.jpg)
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
