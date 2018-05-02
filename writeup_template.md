@@ -48,9 +48,9 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
+I used a combination of color and gradient thresholds and HLS color space to generate a binary image (the pipeline is found in  `image_pipeline.py`).  Here's an example of my output for this step.
 
-![alt text][image3]
+![Image](.test_images/Pipelined_Image_Straight.jpg)
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -71,9 +71,9 @@ dst = np.float32([
     [1050, 720],
 ])
 ```
-Here's a picture of the points placed on the `straight_lines1.jpg` image along with it's warped image:
+Here's a picture of the points placed on the `straight_lines1.jpg` image and that's been warped:
 
-![alt text][image4]
+![Image](./output_images/points_and_warped.jpg)
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
@@ -102,7 +102,7 @@ Taking the original image passing it through the image pipeline which undistorts
 
 Here is an example of my result on a test image:
 
-![alt text][./output_images/warped_with_poly.jpg]
+![Image](./output_images/warped_with_poly.jpg)
 
 ---
 
@@ -118,4 +118,4 @@ Here's a [link to my video result](./videos/project_video.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+The pipeline will start to fail when there's no lines present for a while.  Also, lines similar to road color and shadows may start a problem.  A more robust lane finding method maybe used.  Such as using RGB color spaces.  For example using the Red colorspace could help.
