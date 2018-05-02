@@ -48,7 +48,7 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 I used a combination of color and gradient thresholds and HLS color space to generate a binary image (the pipeline is found in  `image_pipeline.py`).  Here's an example of my output for this step.
 
-![Image](./test_images/Pipelined_Image_Straight.jpg)
+![Image](./output_images/Pipelined_Image_Straight.jpg)
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -81,7 +81,7 @@ Using the "Sliding Window Method" I work my way up the image within a window and
 
 If my lanes were already found I can skip the sliding window approach and just use the line of best fit to find pixel data that contains the lanes within a certain margin.
 
-![alt text][image5]
+This can be found in the jupyter notebook for images and code.
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
