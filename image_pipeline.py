@@ -68,10 +68,8 @@ def hls_select_lightness(img, thresh=(0, 255)):
     return binary_output
 
 
-# image read in from matplotlib (mp) with undistortion coeffecients found from calibrate camera
-def pipeline(img, mtx, dist):
-    # Undistort Image
-    undistort = calibrate_camera.undistort_image(img, mtx, dist)
+# image read in from matplotlib (mp)
+def pipeline(undistort):
     # Kernel size
     ksize = 15
     # Gradient in X direction
